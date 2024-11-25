@@ -26,8 +26,8 @@ jobs:
     - name: Install dependencies
       run: composer install --prefer-dist --no-progress --no-suggest
 
-    - name: Grant execute permissions to PHPUnit
-      run: chmod +x vendor/bin/phpunit
+    - name: Grant execute permissions to all binaries
+      run: chmod +x vendor/bin/*
 
     - name: Run tests with PHPUnit
       run: vendor/bin/phpunit tests --coverage-text
